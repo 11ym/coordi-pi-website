@@ -1,31 +1,15 @@
-# Coordi-π project webpage
+# Coordi-π — Anonymous review materials
 
-**[Open the project homepage](https://11ym.github.io/coordi-pi-website/)**
+Project webpage for **Coordi-π: Coordination-Aware Dual-Hand Action Representation for Bimanual Dexterous Manipulation**.
 
-Project page for **Coordi-π: Coordination-Aware Dual-Hand Action Representation for Bimanual Dexterous Manipulation**.
-
-This public repository contains only the website and its presentation materials: HTML, CSS, browser JavaScript, figures, demonstration videos, and website deployment configuration.
-
-The research implementation, training code, model weights, and datasets are not included. This repository is a project webpage, not a release of the research software.
+Open `index.html` using the anonymous service’s website view. This branch contains the webpage and presentation assets only, not research code, weights, or datasets.
 
 ## Local preview
 
-```sh
-python3 -m http.server 8000
-```
+Run `python3 -m http.server 8000` and open `http://localhost:8000`.
 
-Open `http://localhost:8000`. No package installation is required.
+## Review configuration
 
-## Website files
+Use an anonymous mirror pinned to this branch or commit, with website rendering enabled. Do not link reviewers to the original repository or redirect there when the mirror expires. Media files are not automatically anonymized by text replacement and must be reviewed separately.
 
-- `index.html`: project description, demonstrations, and citation.
-- `style.css`: responsive layout and visual styling.
-- `app.js`: interactive explanations, result tables, and video galleries.
-- `assets/`: materials displayed or linked by the webpage.
-- `scripts/build.py` and `.github/workflows/pages.yml`: website-only deployment.
-
-Changes to `main` deploy the website automatically to GitHub Pages. 
-
-## Publication boundary
-
-Only the website source and the presentation assets listed in `public-files.json` belong in this repository. Manuscripts, PDFs, research implementation, training data, model weights, credentials, and internal notes must stay outside this repository. The build rejects unlisted tracked files and deploys only the listed site files. Review new assets before adding them to the manifest.
+Third-party design and dependency licenses are retained in `DESIGN_CREDITS.txt` and `assets/`.
