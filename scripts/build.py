@@ -47,14 +47,6 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(root / name, target)
 
-    if base_url:
-        page = output / "index.html"
-        html = page.read_text(encoding="utf-8")
-        url = escape(base_url + "/", quote=True)
-        metadata = f'<meta property="og:url" content="{url}">\n  <link rel="canonical" href="{url}">'
-        html = html.replace("<!-- Deployment URL metadata -->", metadata)
-        html = html.replace('content="assets/hero.webp"', f'content="{url}assets/hero.webp"')
-        page.write_text(html, encoding="utf-8")
     print(f"Website ready: {output}")
 
 
