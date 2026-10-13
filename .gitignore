@@ -1,0 +1,25 @@
+_site/
+__pycache__/
+.DS_Store
+*.zip
+
+# Private documents and research artifacts
+*.pdf
+*.tex
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.tar
+*.gz
+*.7z
+.env
+.env.*
+*.pem
+*.key
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+private/
+internal/

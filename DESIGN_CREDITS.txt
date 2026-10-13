@@ -1,0 +1,23 @@
+Website design attribution
+
+This project website adapts the publication-header, resource-link, teaser,
+abstract, media, and citation layout of Nerfies by Keunhong Park et al.:
+https://nerfies.github.io/
+https://github.com/nerfies/nerfies.github.io
+
+The adapted website design is provided under CC BY-SA 4.0:
+https://creativecommons.org/licenses/by-sa/4.0/
+Changes include Coordi-pi content, locally hosted Noto Sans, larger body text,
+responsive experiment charts and robot video galleries. No upstream analytics,
+research code, or research media were copied.
+
+Bulma CSS is from the Nerfies website distribution, under the MIT license;
+see assets/bulma-LICENSE.txt. Noto Sans is under the SIL Open Font License;
+see assets/noto-sans-OFL.txt.
+
+Content organization also references the Diffusion Policy research page:
+https://diffusion-policy.cs.columbia.edu/
+
+These notices apply to website design and the identified third-party assets.
+They do not license the Coordi-pi paper, research figures, videos, methods,
+implementation, weights, or data.
