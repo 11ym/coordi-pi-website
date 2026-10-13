@@ -15,6 +15,8 @@ def main():
     args = parser.parse_args()
     base_url = args.base_url.strip().rstrip("/")
     if base_url:
+        parser.error("Anonymous builds do not accept an identifying deployment URL")
+    if base_url:
         parsed = urlsplit(base_url)
         if parsed.scheme not in ("http", "https") or not parsed.netloc or parsed.query or parsed.fragment:
             parser.error("--base-url must be an HTTP(S) URL without a query or fragment")

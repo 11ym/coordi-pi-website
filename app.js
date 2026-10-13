@@ -75,10 +75,5 @@ $$('[data-open-overview]').forEach(button=>button.addEventListener('click',()=>{
 $('[data-open-figure]').addEventListener('click',()=>figureDialog.showModal());
 $$('dialog').forEach(dialog=>{ $('.dialog-close',dialog).addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});dialog.addEventListener('close',()=>$$('video',dialog).forEach(v=>v.pause()));});
 
-$('#copy-citation').addEventListener('click',async()=>{
-  const content=$('#bibtex').textContent;
-  try{await navigator.clipboard.writeText(content);$('#copy-citation span').textContent='Copied';$('#copy-status').textContent='BibTeX copied to clipboard.';setTimeout(()=>{$('#copy-citation span').textContent='Copy BibTeX';},2500);}
-  catch{const selection=window.getSelection(),range=document.createRange();range.selectNodeContents($('#bibtex'));selection.removeAllRanges();selection.addRange(range);$('#copy-status').textContent='Citation selected. Use your browser copy command.';$('#copy-citation span').textContent='Select & copy';}
-});
 const menuButton=$('.menu-button');menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));$('#navigation').classList.toggle('open',open);});
 $$('#navigation a').forEach(link=>link.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');$('#navigation').classList.remove('open');}));
