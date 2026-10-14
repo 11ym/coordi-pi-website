@@ -286,7 +286,10 @@ p,figcaption{text-wrap:pretty}
 .method-details h3{font-size:22px}
 .equation{background:none;padding:18px 0;margin:12px 0 0;color:#242424;overflow-x:auto;font-size:24px}
 .equation math{font-family:"STIX Two Math","Cambria Math",math;white-space:nowrap}
-.analysis-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;padding-top:36px;border-top:1px solid var(--line)}
+.analysis-grid{grid-template-columns:minmax(0,1fr);gap:40px;padding-top:36px;border-top:1px solid var(--line)}
+.analysis-grid>article{width:100%}
+.analysis-grid .ablation-chart{max-width:none}
+.analysis-grid .coordination{padding-top:36px;border-top:1px solid var(--line)}
 .analysis-grid h3{font-size:23px}
 .analysis-grid article>p{font-size:17px}
 .analysis-grid .chart-note{font-size:14px;color:#666;line-height:1.5}
