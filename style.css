@@ -275,3 +275,28 @@ h1,h2,h3{color:var(--ink)}
 }
 .method-details>article,.analysis-grid>article{min-width:0}
 .table-scroll{max-width:100%}
+
+
+/* Concise publication presentation. */
+h1,h2,h3{text-wrap:balance}
+p,figcaption{text-wrap:pretty}
+.abstract-copy p{text-align:left}
+.image-expand{cursor:zoom-in}
+.method-details{gap:32px;margin-top:40px}
+.method-details h3{font-size:22px}
+.equation{background:none;padding:18px 0;margin:12px 0 0;color:#242424;overflow-x:auto;font-size:24px}
+.equation math{font-family:"STIX Two Math","Cambria Math",math;white-space:nowrap}
+.analysis-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;padding-top:36px;border-top:1px solid var(--line)}
+.analysis-grid h3{font-size:23px}
+.analysis-grid article>p{font-size:17px}
+.analysis-grid .chart-note{font-size:14px;color:#666;line-height:1.5}
+.ablation-row{grid-template-columns:148px minmax(0,1fr);font-size:14px}
+.bcs-values{gap:24px;margin:30px 0}
+.bcs-values strong{font-size:36px}
+@media(max-width:800px){.analysis-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:560px){
+ .equation{font-size:20px;padding-block:16px}
+ .method-details h3{font-size:20px}
+ .ablation-row{grid-template-columns:135px minmax(0,1fr);gap:8px}
+ .publication-title{text-wrap:balance}
+}

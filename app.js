@@ -45,8 +45,6 @@ function renderResults(){
   $('#setting-controls').hidden=domain!=='simulation';
   $('#result-panel').setAttribute('aria-labelledby',domain==='simulation'?'result-sim-tab':'result-real-tab');
   $('#success-chart').innerHTML=[...labels,'Mean'].map((name,i)=>chartRow(name,base[i],ours[i],i===labels.length)).join('');
-  $('#comparison-caption').textContent=`DexJoCo · ${setting==='obj'?'object':'full'} randomization`;
-  $('#benchmark-table').innerHTML=benchmark[setting].map(([name,values])=>`<tr class="${name==='Coordi-π'?'ours':''}"><th scope="row">${name}</th>${values.map(v=>`<td>${v.toFixed(1)}</td>`).join('')}</tr>`).join('');
 }
 $$('[data-domain]').forEach(button=>button.addEventListener('click',()=>{domain=button.dataset.domain;activateTab(button,button.closest('[role="tablist"]'));renderResults();}));
 $$('[data-setting]').forEach(button=>button.addEventListener('click',()=>{setting=button.dataset.setting;$$('[data-setting]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});renderResults();}));
@@ -77,3 +75,4 @@ $$('dialog').forEach(dialog=>{ $('.dialog-close',dialog).addEventListener('click
 
 const menuButton=$('.menu-button');menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));$('#navigation').classList.toggle('open',open);});
 $$('#navigation a').forEach(link=>link.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');$('#navigation').classList.remove('open');}));
+
